@@ -10283,9 +10283,13 @@ namespace Intuit.Ipp.Data {
         private MarkupInfo markupInfoField;
         
         private decimal qtyField;
-        
+
         private bool qtyFieldSpecified;
-        
+
+        private decimal unitPriceField;
+
+        private bool unitPriceFieldSpecified;
+
         private UOMRef uOMRefField;
         
         private ReferenceType itemAccountRefField;
@@ -10390,7 +10394,28 @@ namespace Intuit.Ipp.Data {
                 this.qtyField = value;
             }
         }
-        
+
+
+        /// <remarks/>
+        /// <summary>
+        /// 
+        /// Product: ALL
+        /// Description: UnitPrice
+        /// line.
+        /// 
+        /// </summary>
+        public decimal UnitPrice
+        {
+            get
+            {
+                return this.unitPriceField;
+            }
+            set
+            {
+                this.unitPriceField = value;
+            }
+        }
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         [JsonIgnore()]
@@ -10402,7 +10427,21 @@ namespace Intuit.Ipp.Data {
                 this.qtyFieldSpecified = value;
             }
         }
-        
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [JsonIgnore()]
+        public bool UnitPriceSpecified
+        {
+            get
+            {
+                return this.unitPriceFieldSpecified;
+            }
+            set
+            {
+                this.unitPriceFieldSpecified = value;
+            }
+        }
         /// <remarks/>
         /// <summary>
         /// 
